@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Suporte | SafeBag Tech</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <header>
+           <nav>
+                 <div class="logo">
+                    <svg class="logo-icon" width="35" height="35" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" fill="rgba(0, 242, 255, 0.1)" stroke="#00f2ff" stroke-width="1.5"/>
+                        <rect x="12" y="16" width="16" height="13" rx="2" stroke="#00f2ff" stroke-width="2"/>
+                        <path d="M15 16V12C15 9 17 7 20 7C23 7 25 9 25 12V16" stroke="#00f2ff" stroke-width="2"/>
+                        <circle cx="20" cy="22.5" r="1.5" fill="#00f2ff"/>
+                     </svg>
+        <span>SAFE</span>BAG
+        </div>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="equipe.html">Equipe</a></li>
+            <li><a href="ajuda.html">Ajuda</a></li>
+            
+        </ul>
+    </nav>
+    </header>
+
+    <main>
+        <section class="conteudo-pagina">
+            <div class="form-container">
+                <h2>Vincular Nova Bolsa</h2>
+                <p>Crie sua conta para ativar o rastreamento em tempo real e a trava biométrica.</p>
+            
+
+            <div class="pre-cadastro">
+                <form>
+                    <div class="dadoscadastro">
+                       <label class="dadosletras">NOME COMPLETO</label>
+                       <input class="centralizar" type="text" id="nome-user" placeholder="Ex: João Silva">
+                       
+                       <label class="dadosletras">E-MAIL</label>
+                       <input class="centralizar" type="email" id="email-user" placeholder="seu@email.com">
+                       
+                       <label class="dadosletras">ID DO SENSOR (ETIQUETA)</label>
+                       <input class="centralizar" type="text" id="id-sensor" placeholder="Ex: SB-IOT-9921">
+
+                       <label class="dadosletras">SENHA DE ACESSO</label>
+                       <input class="centralizar" type="password" id="senha-user" placeholder="••••••••">
+                        </div>
+                </form>
+
+                <button class="btn-acao" onclick="realizarCadastro()">Ativar Sistema IoT</button>
+                
+                <p>Ao clicar, você aceita os termos de segurança e criptografia de dados.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
