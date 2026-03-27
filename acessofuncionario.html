@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Acesso Restrito | IntelPack</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link para o seu CSS atual -->
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="style.css">
+</head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
 </head>
@@ -21,6 +23,7 @@
             <li><a href="cadastro.html">Cadastro</a></li>
             <li><a href="equipe.html">Equipe</a></li>
             <li><a href="ajuda.html">Ajuda</a></li>
+            <li><a href="acessofuncionario.html">Funcionário</a></li>
         </ul>
     </nav>
 
@@ -42,29 +45,6 @@
         </div>
     </section>
 
-    <script>
-        function verifyAccess() {
-            const key = document.getElementById('accessKey').value;
-            const error = document.getElementById('error');
-            
-            // A SENHA PADRÃO ESTÁ AQUI: "equipe2024"
-            const masterKey = "equipe2026"; 
-
-            if (key === masterKey) {
-                // Se correto, envia para a página da equipe
-                window.location.href = "equipe.html";
-            } else {
-                error.style.display = "block";
-                document.getElementById('accessKey').style.borderBottomColor = "#ff4d4d";
-            }
-        }
-
-        // Permitir dar "Enter" no teclado para entrar
-        document.getElementById('accessKey').addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') {
-                verifyAccess();
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -68,3 +68,26 @@ function buscarCEP() {
         })
         .catch(() => out.innerHTML = "⚠️ Erro na conexão.");
 }
+
+   function verifyAccess() {
+            const key = document.getElementById('accessKey').value;
+            const error = document.getElementById('error');
+            
+            // A SENHA PADRÃO ESTÁ AQUI: "equipe2026"
+            const masterKey = "equipe2026"; 
+
+            if (key === masterKey) {
+                // Se correto, envia para a página da equipe
+                window.location.href = "equipe.html";
+            } else {
+                error.style.display = "block";
+                document.getElementById('accessKey').style.borderBottomColor = "#ff4d4d";
+            }
+        }
+
+        // Permitir dar "Enter" no teclado para entrar
+        document.getElementById('accessKey').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                verifyAccess();
+            }
+        });

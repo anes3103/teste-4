@@ -1,0 +1,88 @@
+.dadoscadastro {
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+.dadoscadastro input {
+    width: 100%;
+    padding: 12px 0;
+    margin-bottom: 25px;
+    border: none;
+    border-bottom: 2px solid var(--border);
+    background: transparent;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+.dadoscadastro input:focus {
+    border-bottom-color: var(--primary);
+}
+
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+
+.dadoscadastro {
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+.dadoscadastro input {
+    width: 100%;
+    padding: 12px 0;
+    margin-bottom: 25px;
+    border: none;
+    border-bottom: 2px solid var(--border);
+    background: transparent;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+.dadoscadastro input:focus {
+    border-bottom-color: var(--primary);
+}
+
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+
+
+/*acesso do funcionário*/
+
+
+
+.login-container {
+     height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-box {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+.lock-icon {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px var(--primary));
+}
+.error-msg {
+    color: #ff4d4d;
+    font-size: 0.8rem;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    display: none;
+    font-weight: bold;
+}

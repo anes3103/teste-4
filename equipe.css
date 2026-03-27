@@ -1,0 +1,85 @@
+/* =========================================
+   ESTRUTURA DE SEÇÕES E CARDS
+   ========================================= */
+section { padding: 60px 10%; }
+
+h2 { 
+    font-size: 2.2rem; 
+    margin-bottom: 40px; 
+    text-align: center; 
+    color: var(--primary); 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.glass-card {
+    background: var(--card); 
+    border: 1px solid var(--border);
+    border-radius: 20px; 
+    padding: 25px; 
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.glass-card:hover { 
+    border-color: var(--primary); 
+    transform: translateY(-8px); 
+    box-shadow: 0 10px 30px rgba(0, 242, 255, 0.1);
+}
+
+/* =========================================
+   GRID DA EQUIPE (CARDS PEQUENOS)
+   ========================================= */
+.team-grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 20px; 
+}
+
+.member-small {
+    padding: 15px; 
+    text-align: center; 
+    background: var(--card);
+    border-radius: 15px; 
+    border: 1px solid var(--border);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.member-small:hover { 
+    border-color: var(--primary); 
+    background: rgba(255,255,255,0.08); 
+}
+
+.member-small img { 
+    width: 55px; /* Avatar menor */
+    height: 55px; 
+    border-radius: 50%; 
+    border: 2px solid var(--primary); 
+    margin-bottom: 8px; 
+}
+
+.member-small h4 { 
+    font-size: 0.85rem; 
+    color: white; 
+    margin-bottom: 2px;
+}
+
+.role-tag {
+    font-size: 0.65rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.member-links {
+    margin-top: 10px;
+    display: flex;
+    gap: 12px;
+    font-size: 0.9rem;
+}
+
+.member-links a { color: var(--text-muted); transition: 0.3s; }
+.member-links a:hover { color: var(--primary); transform: scale(1.2); }
