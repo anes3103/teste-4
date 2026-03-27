@@ -30,7 +30,17 @@
         <div class="hero-content">
             <h1 class="hero-title">O Futuro é <span class="highlight">Seguro</span>.</h1>
             <p class="hero-subtitle">Tecnologia vestível para proteger o que é seu.</p>
-            <button class="btn" onclick="location.href='produtos.html'">Ver Protótipo</button>
+
+            <div style="text-align: center; z-index: 2;">
+                
+                <button class="btn" onclick="toggleVideo()">ASSISTIR DEMONSTRAÇÃO</button>
+            
+                <div id="video-container" style="display:none; margin-top: 30px; width: 100%; max-width: 600px;">
+                    <div style="background: #111; padding: 40px; border: 1px dashed #333; color: #555;">
+                        VÍDEO SERÁ CARREGADO AQUI
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -62,5 +72,8 @@
             </div>
         </div>
     </section>
+
+    <script src="script.js"></script>
+
 </body>
 </html>

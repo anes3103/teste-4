@@ -91,3 +91,12 @@ function buscarCEP() {
                 verifyAccess();
             }
         });
+
+
+
+
+        function toggleVideo() {
+    const container = document.getElementById('video-container');
+    container.style.display = container.style.display === 'none' ? 'block' : 'none';
+
+        }

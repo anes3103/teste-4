@@ -31,44 +31,6 @@ body {
    NAVEGAÇÃO (STICKY + BLUR + LOGO)
    ========================================= */
 
-.hero-section {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: radial-gradient(circle, rgba(0, 242, 255, 0.1) 0%, #0a0d1d 80%);
-    padding: 0 20px;
-}
-
-
-.hero-title {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 5rem;
-    margin-bottom: 10px;
-    color: #ffffff;
-}
-
-
-.highlight {
-    color: #3abdf5;
-}
-
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.hero-subtitle {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.5rem;
-    color: #94a3b8;
-    margin: 25px auto; 
-    max-width: 600px;
-    line-height: 1.6;
-}
 
 
 nav {
@@ -309,9 +271,9 @@ h2 {
     color: white; 
     font-weight: 800; 
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     cursor: pointer; 
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .btn:hover { 
