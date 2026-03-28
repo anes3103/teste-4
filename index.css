@@ -1,0 +1,54 @@
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle, rgba(0, 242, 255, 0.1) 0%, #0a0d1d 80%);
+    padding: 0 20px;
+}
+
+
+.hero-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+
+.highlight {
+    color: #3abdf5;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    color: #94a3b8;
+    margin: 25px auto; 
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+
+
+
+
+
+/* BOTOES ANIMADOS */
+.btn-tech {
+  padding: 12px 28px; border-radius: 50px; border: 1px solid var(--neon-blue);
+  background: transparent; color: var(--neon-blue); font-weight: 600;
+  cursor: pointer; transition: 0.4s; position: relative; overflow: hidden;
+}
+.btn-tech:hover {
+  background: var(--neon-blue); color: var(--bg-dark);
+  box-shadow: 0 0 20px var(--neon-blue); transform: scale(1.05);
+}
