@@ -23,7 +23,6 @@
             <li><a href="cadastro.html">Cadastro</a></li>
             <li><a href="equipe.html">Equipe</a></li>
             <li><a href="ajuda.html">Ajuda</a></li>
-            <li><a href="acessofuncionario.html">Funcionário</a></li>
             
         </ul>
     </nav>
@@ -43,18 +42,18 @@
     <script>
 // Arrumei as funções
         const membros = [
-            { nome: "Maria Eduarda", cargo: "Design do Site", github: "anes3103", email: "m.anes@uni9.edu.br", avatar: "7" },
-            { nome: "Felipe", cargo: "Testes e Integração", github: "felipe-dev", email: "yfelipeferreirasilvay@uni9.edu.br", avatar: "1" },
-            { nome: "Karen", cargo: "Gestão e Revisão Final", github: "karen-design", email: "karen.freman.nascimento@uni9.edu.br ", avatar: "2" },
-            { nome: "Wesley", cargo: "Alanista de banco de dados", github: "wesley-techhttps://github.com/wexsouza", email: "wesley.souza@uni9.edu.br", avatar: "3" },
-            { nome: "Ighor", cargo: "Lógica de Mapas e Conexão", github: "ighorieckes-alt", email: "ighor.ieckes@uni9.edu.br", avatar: "4" },
-            { nome: "Julia", cargo: "Design do Mascote e Roteiro", github: "julia-sys", email: "julia.c.turatti@uni9.edu.br", avatar: "5" },
-            { nome: "Luana", cargo: "Edição de Vídeo e Mídia", github: "luana-sec", email: " lc.alencar@uni9.edu.br", avatar: "6" },
-            { nome: "Miguel", cargo: "Finalização e Qualidade", github: "miguel-mob", email: " lucasnunes.borges@uni9.edu.br", avatar: "8" },
-            { nome: "Laryssa", cargo: "Montagem do Circuito", github: "lary-manager", email: " laryssa.freitas@uni9.edu.br ", avatar: "9" },
-            { nome: "Nicolas", cargo: "Programação do Arduino", github: "nicolas-qa", email: "ferraz.nicolas@uni9.edu.br", avatar: "10" },
-            { nome: "Thiago", cargo: "Arquitetura de Software", github: "thiago-ops", email: "thiagosbatisteli@uni9.edu.br", avatar: "11" },
-            { nome: "Marco", cargo: "Orçamentos e Hardware", github: "marco-arch", email: "ferreira.marco@uni9.edu.br", avatar: "12" }
+            { nome: "Maria Eduarda", cargo: "Design do Site", github: "anes3103", email: "m.anes@uni9.edu.br", img: "imagens/avatar/Duda.png"},
+            { nome: "Felipe", cargo: "Testes e Integração", github: "felipe-dev", email: "yfelipeferreirasilvay@uni9.edu.br", img: "imagens/avatar/Felipe.png" },
+            { nome: "Karen", cargo: "Gestão e Revisão Final", github: "karen-design", email: "karen.freman.nascimento@uni9.edu.br ", img: "imagens/avatar/Karen.png" },
+            { nome: "Wesley", cargo: "Alanista de banco de dados", github: "wexsouza", email: "wesley.souza@uni9.edu.br", img: "imagens/avatar/Wesley.png" },
+            { nome: "Ighor", cargo: "Lógica de Mapas e Conexão", github: "ighorieckes-alt", email: "ighor.ieckes@uni9.edu.br", img: "imagens/avatar/Ighor.png" },
+            { nome: "Julia", cargo: "Design do Mascote e Roteiro", github: "julia-sys", email: "julia.c.turatti@uni9.edu.br", img: "imagens/avatar/Julia.png" },
+            { nome: "Luana", cargo: "Edição de Vídeo e Mídia", github: "luana-sec", email: " lc.alencar@uni9.edu.br", img: "imagens/avatar/Luana.png" },
+            { nome: "Miguel", cargo: "Finalização e Qualidade", github: "miguel-mob", email: " lucasnunes.borges@uni9.edu.br", img: "imagens/avatar/Miguel.png" },
+            { nome: "Laryssa", cargo: "Montagem do Circuito", github: "lary-manager", email: " laryssa.freitas@uni9.edu.br ", img: "imagens/avatar/Laryssa.png" },
+            { nome: "Nicolas", cargo: "Programação do Arduino", github: "nicolas-qa", email: "ferraz.nicolas@uni9.edu.br", img: "imagens/avatar/Nicolas.png" },
+            { nome: "Thiago", cargo: "Arquitetura de Software", github: "thiago-ops", email: "thiagosbatisteli@uni9.edu.br", img: "imagens/avatar/Thiago.png" },
+            { nome: "Marco", cargo: "Orçamentos e Hardware", github: "marco-arch", email: "ferreira.marco@uni9.edu.br", img: "imagens/avatar/Marco.png" }
         ];
 
         const container = document.getElementById('team-container');
@@ -63,7 +62,7 @@
         membros.forEach(m => {
             container.innerHTML += `
                 <div class="member-small glass-card">
-                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=${m.avatar}" alt="${m.nome}">
+                    <img src="${m.img}" alt="${m.nome}">
                     <h4>${m.nome}</h4>
                     <span class="role-tag">${m.cargo}</span>
                     
@@ -71,7 +70,7 @@
                         <a href="https://github.com/${m.github}" target="_blank" title="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="mailto:${m.email}@safebag.tech" title="E-mail">
+                        <a href="mailto:${m.email}" title="E-mail">
                             <i class="fas fa-envelope"></i>
                         </a>
                     </div>

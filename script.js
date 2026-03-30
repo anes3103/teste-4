@@ -1,34 +1,13 @@
-// API ViaCEP
-function buscarCEP() {
-    const cep = document.getElementById('cep').value.replace(/\D/g, '');
-    const out = document.getElementById('resultado');
 
-    if (cep.length !== 8) {
-        out.innerHTML = "CEP inválido.";
-        return;
-    }
-
-    fetch(`https://viacep.com.br/ws/${cep}/json/`)
-        .then(res => res.json())
-        .then(data => {
-            if (data.erro) out.innerHTML = "Não encontrado.";
-            else out.innerHTML = `📍 Localização: ${data.logradouro}, ${data.localidade}`;
-        });
-}
-
-// Animação Simples de Scroll
+// Animação do Scroll
 window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
     if (window.scrollY > 50) nav.style.background = "rgba(5, 7, 10, 0.95)";
     else nav.style.background = "rgba(5, 7, 10, 0.8)";
 });
 
-// Frases aleatórias para o Mascote
 const frases = [
     "Precisa de ajuda com o sensor?",
-    "A SafeBag protege você!",
-    "Clique no meu nariz para uma surpresa!",
-    "Já verificou sua bateria 9V hoje?",
     "Estamos online 24h para você."
 ];
 
@@ -37,13 +16,13 @@ function falarMascote() {
     const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
     balao.innerText = fraseAleatoria;
     
-    // Pequeno efeito visual no mascote
+    // 
     const bot = document.getElementById('safebot');
     bot.style.transform = "scale(1.1)";
     setTimeout(() => bot.style.transform = "scale(1)", 200);
 }
 
-// API de CEP atualizada
+// ViaCep
 function buscarCEP() {
     const cep = document.getElementById('cep').value.replace(/\D/g, '');
     const out = document.getElementById('resultado-cep');
@@ -69,21 +48,13 @@ function buscarCEP() {
         .catch(() => out.innerHTML = "⚠️ Erro na conexão.");
 }
 
-   function verifyAccess() {
-            const key = document.getElementById('accessKey').value;
-            const error = document.getElementById('error');
-            
-            // A SENHA PADRÃO ESTÁ AQUI: "equipe2026"
-            const masterKey = "equipe2026"; 
+    function toggleVideo() {
+        const container = document.getElementById('video-container');
+        container.style.display = container.style.display === 'none' ? 'block' : 'none';
 
-            if (key === masterKey) {
-                // Se correto, envia para a página da equipe
-                window.location.href = "equipe.html";
-            } else {
-                error.style.display = "block";
-                document.getElementById('accessKey').style.borderBottomColor = "#ff4d4d";
-            }
         }
+
+
 
         // Permitir dar "Enter" no teclado para entrar
         document.getElementById('accessKey').addEventListener('keypress', function (e) {
@@ -94,9 +65,3 @@ function buscarCEP() {
 
 
 
-
-        function toggleVideo() {
-    const container = document.getElementById('video-container');
-    container.style.display = container.style.display === 'none' ? 'block' : 'none';
-
-        }
