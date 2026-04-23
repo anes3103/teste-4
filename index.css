@@ -1,11 +1,12 @@
 .hero-section {
     height: 110vh;
+    max-width: 100;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     background: url(/imagens/fundo1.png) no-repeat;
-    background-position: center;
+    background-size: cover;
     opacity: 0.9;
     padding: 0 20px;
 }
