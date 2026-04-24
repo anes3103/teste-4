@@ -1,6 +1,6 @@
-/* =========================================
+/* 
    ESTRUTURA DE SEÇÕES E CARDS
-   ========================================= */
+    */
 section { padding: 60px 10%; }
 
 h2 { 
@@ -26,9 +26,9 @@ h2 {
     box-shadow: 0 10px 30px rgba(0, 242, 255, 0.1);
 }
 
-/* =========================================
+/* 
    GRID DA EQUIPE (CARDS PEQUENOS)
-   ========================================= */
+    */
 .team-grid {
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
@@ -47,17 +47,21 @@ h2 {
     align-items: center;
 }
 
+.member-small img { 
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover; 
+    border-radius: 50%; 
+    border: 2px solid #00ffff;
+    display: block;
+    margin: 0 auto 8px auto;
+    padding: 0;
+}
+
 .member-small:hover { 
     border-color: var(--primary); 
     background: rgba(255,255,255,0.08); 
-}
-
-.member-small img { 
-    width: 55px; /* Avatar menor */
-    height: 55px; 
-    border-radius: 50%; 
-    border: 2px solid var(--primary); 
-    margin-bottom: 8px; 
 }
 
 .member-small h4 { 
@@ -83,6 +87,12 @@ h2 {
 
 .member-links a { color: var(--text-muted); transition: 0.3s; }
 .member-links a:hover { color: var(--primary); transform: scale(1.2); }
+
+/* Padronização para imagens ampliadas */
+img[src*="avatar"] {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
 
 
 
