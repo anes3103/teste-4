@@ -6,7 +6,7 @@ const membros = [
             { nome: "Ighor", cargo: "Arquitetura do Software", github: "ighorieckes-alt", email: "ighor.ieckes@uni9.edu.br", img: "imagens/avatar/Ighor.jpeg" },
             { nome: "Julia", cargo: "Edição de Vídeo e Mídia", github: "julia-sys", email: "julia.c.turatti@uni9.edu.br", img: "imagens/avatar/Julia.jpeg" },
             { nome: "Luana", cargo: "Design do Mascote e Roteiro ", github: "LuanaAlencar0", email: " lc.alencar@uni9.edu.br", img: "imagens/avatar/Luana.jpeg" },
-            { nome: "Miguel", cargo: "Finalização, qualidade e ABNT", github: "lucasnunesbordes", email: " lucasnunes.borges@uni9.edu.br", img: "imagens/avatar/Miguel.jpeg" },
+            { nome: "Miguel", cargo: "Finalização, qualidade e ABNT", github: "lucasnunesborges", email: " lucasnunes.borges@uni9.edu.br", img: "imagens/avatar/Miguel.jpeg" },
             { nome: "Laryssa", cargo: "Programação do Arduino", github: "laryssafreitas", email: " laryssa.freitas@uni9.edu.br ", img: "imagens/avatar/Laryssa.jpeg" },
             { nome: "Nicolas", cargo: "Montagem do Circuito", github: "Nferraz10", email: "ferraznicolas2102@gmail.com", img: "imagens/avatar/Nicolas.jpeg" },
             { nome: "Marco", cargo: "Orçamentos e Hardware", github: "marco-arch", email: "ferreira.marco@uni9.edu.br", img: "imagens/avatar/Marco.jpeg" },    
