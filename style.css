@@ -228,12 +228,12 @@ nav ul a:hover {
    SEÇÕES E COMPONENTES
    ========================================= */
 section { 
-    padding: 80px 10%; 
+    padding: 35px 10%; 
 }
 
 h2 { 
-    font-size: 2.2rem; 
-    margin-bottom: 40px; 
+    font-size: 1.9rem; 
+    margin-bottom: 20px; 
     text-align: center; 
     color: var(--primary); 
     text-transform: uppercase;
@@ -244,7 +244,7 @@ h2 {
     background: var(--card); 
     border: 1px solid var(--border);
     border-radius: 20px; 
-    padding: 30px; 
+    padding: 23px; 
     backdrop-filter: blur(5px);
     transition: 0.4s ease;
 }
