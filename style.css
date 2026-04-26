@@ -17,81 +17,80 @@
     font-family: 'Inter', sans-serif, system-ui; 
 }
 
-
-
 body { 
     background-image: linear-gradient(#0b0e14, rgb(7, 7, 37));
     line-height: 1.6; 
     overflow-x: hidden; 
     color: #e0e0e0;
-    text-align: center;
+    min-height: 100vh;
 }
 
 /* =========================================
-   NAVEGAÇÃO (STICKY + BLUR + LOGO)
+   NAVEGAÇÃO (LOGO À ESQUERDA)
    ========================================= */
-
-
-
 nav {
-    display: flex; 
-    justify-content: space-between; 
+    display: flex;
+    justify-content: space-between; /* Logo na esquerda, Menu na direita */
     align-items: center;
-    padding: 1.7rem 10%; 
-    background: rgba(5, 7, 10, 0.85);
-    backdrop-filter: blur(12px); 
+    padding: 1rem 10%;
+    background: rgba(5, 7, 10, 0.9);
+    backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    position: sticky; 
-    top: 0; 
+    position: sticky;
+    top: 0;
     z-index: 1000;
     border-bottom: 1px solid var(--border);
 }
 
-/* Container da Logo */
-.logo { 
+.logo {
     display: flex;
     align-items: center;
-    gap: 14px;
-    font-size: 1.6rem; 
-    font-weight: 800; 
-    color: var(--primary); /* "TRACK" herdará essa cor */
-    text-transform: uppercase; 
+    gap: 12px;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--primary);
+    text-transform: uppercase;
     letter-spacing: 1px;
     transition: 0.3s ease;
     cursor: pointer;
     text-decoration: none;
+    /* Removido margin auto para não centralizar */
 }
 
 .logo-icon {
     width: 42px;
     height: 42px;
-    filter: drop-shadow(0 0 1px var(--primary));
+    filter: drop-shadow(0 0 5px var(--primary));
     transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    object-fit: contain;
 }
 
-/* Animação ao passar o mouse na logo */
 .logo:hover {
     transform: scale(1.03);
 }
 
 .logo:hover .logo-icon {
     transform: rotate(-10deg);
-    filter: drop-shadow(0 0 2px var(--primary));
 }
 
 .logo span { 
     color: white; 
     opacity: 0.9; 
-    font-weight: 300; /* SAFE (mais fino) */
+    font-weight: 300; 
 }
 
 /* Menu de Links */
-nav ul { display: flex; list-style: none; gap: 40px; }
+nav ul { 
+    display: flex; 
+    list-style: none; 
+    gap: 30px; 
+    align-items: center;
+}
 
 nav ul a { 
     color: var(--text-muted); 
     text-decoration: none; 
-    font-size: 1.38rem; 
+    font-size: 0.9rem; 
     font-weight: 600;
     text-transform: uppercase;
     transition: 0.3s; 
@@ -99,7 +98,6 @@ nav ul a {
     padding: 8px 0;
 }
 
-/* Linha animada que surge embaixo do link */
 nav ul a::after {
     content: '';
     position: absolute;
@@ -118,14 +116,13 @@ nav ul a:hover::after {
 
 nav ul a:hover { 
     color: var(--primary); 
-    text-shadow: 0 0 8px rgba(0, 242, 255, 0.5); 
 }
 
 /* =========================================
-   BOTÕES TÉCNICOS
+   BOTÕES E COMPONENTES
    ========================================= */
 .btn {
-    padding: 12px 25px; 
+    padding: 10px 25px; 
     border-radius: 50px; 
     border: none;
     background: linear-gradient(45deg, var(--primary), var(--secondary));
@@ -139,10 +136,51 @@ nav ul a:hover {
 }
 
 .btn:hover { 
-    box-shadow: 0 0 20px var(--primary); 
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.5); 
     transform: scale(1.05); 
 }
 
+.btn-acao {
+    background: #00d2d3; 
+    color: #0b0e14; 
+    border: none;
+    padding: 12px; 
+    width: 30%; 
+    border-radius: 100px;
+    font-weight: 800; 
+    cursor: pointer;
+}
+
+/* =========================================
+   SEÇÕES E CARDS
+   ========================================= */
+section { 
+    padding: 60px 10%; 
+}
+
+h2 { 
+    font-size: 1.9rem; 
+    margin-bottom: 24px; 
+    text-align: center; 
+    color: var(--primary); 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.glass-card {
+    background: var(--card); 
+    border: 1px solid var(--border);
+    border-radius: 20px; 
+    padding: 25px; 
+    backdrop-filter: blur(5px);
+    transition: 0.4s ease;
+}
+
+.glass-card:hover { 
+    border-color: var(--primary); 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 30px rgba(0, 242, 255, 0.1);
+}
 
 /* =========================================
    FOOTER
@@ -154,122 +192,3 @@ footer {
     color: var(--text-muted);
     font-size: 0.8rem;
 }
-
-
-/* modificação essa parte é o segundo CSS depois apagar coisas que não fazem sentido*/
-
-
-.btn-acao {
-    background: #00d2d3; color: #0b0e14; border: none;
-    padding: 12px; width: 30%; border-radius: 100px;
-    font-weight: 800; cursor: pointer;
-
-}
-
-/* =========================================
-   NAVEGAÇÃO (CORREÇÃO DE ALINHAMENTO)
-   ========================================= */
-nav {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center;
-    padding: 1rem 10%; 
-    background: rgba(5, 7, 10, 0.9);
-    backdrop-filter: blur(12px); 
-    position: sticky; 
-    top: 0; 
-    z-index: 1000;
-    border-bottom: 1px solid var(--border);
-}
-
-.logo { 
-    display: flex;
-    align-items: center; /* Centraliza verticalmente ícone e texto */
-    gap: 10px;
-    font-size: 1.4rem; 
-    font-weight: 800; 
-    color: var(--primary); 
-    text-transform: uppercase; 
-    letter-spacing: 1px;
-    cursor: pointer;
-}
-
-.logo-icon {
-    display: block; /* Garante que o SVG se comporte como bloco no flex */
-    filter: drop-shadow(0 0 5px var(--primary));
-}
-
-.logo span { 
-    color: white; 
-    font-weight: 300; 
-}
-
-nav ul { 
-    display: flex; 
-    list-style: none; 
-    gap: 25px; 
-}
-
-nav ul a { 
-    color: var(--text-muted); 
-    text-decoration: none; 
-    font-size: 0.85rem; 
-    font-weight: 600;
-    text-transform: uppercase;
-    transition: 0.3s; 
-    position: relative;
-}
-
-nav ul a:hover { 
-    color: var(--primary); 
-}
-
-/* =========================================
-   SEÇÕES E COMPONENTES
-   ========================================= */
-section { 
-    padding: 28px 10%; 
-}
-
-h2 { 
-    font-size: 1.9rem; 
-    margin-bottom: 16px; 
-    text-align: center; 
-    color: var(--primary); 
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.glass-card {
-    background: var(--card); 
-    border: 1px solid var(--border);
-    border-radius: 20px; 
-    padding: 23px; 
-    backdrop-filter: blur(5px);
-    transition: 0.4s ease;
-}
-
-.glass-card:hover { 
-    border-color: var(--primary); 
-    transform: translateY(-5px); 
-    box-shadow: 0 10px 30px rgba(0, 242, 255, 0.1);
-}
-
-.btn {
-    padding: 5px 20px; 
-    border-radius: 50px; 
-    border: none;
-    background: linear-gradient(45deg, var(--primary), var(--secondary));
-    color: white; 
-    font-weight: 800; 
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    cursor: pointer; 
-    transition: 0.5s;
-}
-
-.btn:hover { 
-    box-shadow: 0 0 20px rgba(0, 242, 255, 0.4); 
-    transform: scale(1.05); 
-}
-
