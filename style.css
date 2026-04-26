@@ -37,7 +37,7 @@ nav {
     display: flex; 
     justify-content: space-between; 
     align-items: center;
-    padding: 1rem 10%; 
+    padding: 1.7rem 10%; 
     background: rgba(5, 7, 10, 0.85);
     backdrop-filter: blur(12px); 
     -webkit-backdrop-filter: blur(12px);
@@ -51,8 +51,8 @@ nav {
 .logo { 
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-size: 1.4rem; 
+    gap: 14px;
+    font-size: 1.6rem; 
     font-weight: 800; 
     color: var(--primary); /* "TRACK" herdará essa cor */
     text-transform: uppercase; 
@@ -63,9 +63,9 @@ nav {
 }
 
 .logo-icon {
-    width: 32px;
-    height: 32px;
-    filter: drop-shadow(0 0 8px var(--primary));
+    width: 42px;
+    height: 42px;
+    filter: drop-shadow(0 0 1px var(--primary));
     transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -76,7 +76,7 @@ nav {
 
 .logo:hover .logo-icon {
     transform: rotate(-10deg);
-    filter: drop-shadow(0 0 15px var(--primary));
+    filter: drop-shadow(0 0 2px var(--primary));
 }
 
 .logo span { 
@@ -86,17 +86,17 @@ nav {
 }
 
 /* Menu de Links */
-nav ul { display: flex; list-style: none; gap: 25px; }
+nav ul { display: flex; list-style: none; gap: 40px; }
 
 nav ul a { 
     color: var(--text-muted); 
     text-decoration: none; 
-    font-size: 0.8rem; 
+    font-size: 1.38rem; 
     font-weight: 600;
     text-transform: uppercase;
     transition: 0.3s; 
     position: relative;
-    padding: 5px 0;
+    padding: 8px 0;
 }
 
 /* Linha animada que surge embaixo do link */
@@ -228,12 +228,12 @@ nav ul a:hover {
    SEÇÕES E COMPONENTES
    ========================================= */
 section { 
-    padding: 35px 10%; 
+    padding: 28px 10%; 
 }
 
 h2 { 
     font-size: 1.9rem; 
-    margin-bottom: 20px; 
+    margin-bottom: 16px; 
     text-align: center; 
     color: var(--primary); 
     text-transform: uppercase;
