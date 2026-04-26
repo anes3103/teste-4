@@ -1,13 +1,21 @@
-/* =========================================
-   MASCOTE E AJUDA (ANIMAÇÕES)
-   ========================================= */
+
+   /* MASCOTE E AJUDA (ANIMAÇÕES) */
+  
 .mascote-container { 
-    display: flex;
-    flex-direction: column;
+    display: flex; /* display flex faz com que os elementos fiquem linha*/
+    flex-direction: column; /*ao contrario do display, ele define a direção dos elementos*/
     align-items: center;
-    justify-content: center;
+    justify-content: center; /*justify-content: center; centraliza os elementos no meio do container*/
     margin-top: 30px;
     width: 100%;
+    
+}
+
+/*o keyframes é o codigo que faz uma determinada animação acontecer, floating define que será para flutuar*/
+/* define o movimento de subida e descida variando o eixo Y */
+@keyframes floating {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
 }
 
 #safebot {
@@ -15,7 +23,7 @@
     margin-left: auto;
     margin-right: auto;
     display: block;
-    animation: floating 3s ease-in-out infinite;
+    animation: floating 3s ease-in-out infinite; /*animation funciona junto com o keyframes. infinite faz a animação rodar em loop*/
     filter: drop-shadow(0 0 15px var(--primary));
     cursor: pointer;
 }
@@ -24,21 +32,16 @@
     background: white; 
     color: #333; 
     padding: 8px 15px;
-    border-radius: 12px 12px 12px 0; 
+    border-radius: 12px 12px 12px 0; /* o 0 no final cria aponta quadrada do balão*/
     font-size: 0.75rem;
     font-weight: 800; 
     margin-bottom: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 
-@keyframes floating {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-}
 
-/* =========================================
-   FORMULÁRIOS E FAQ
-   ========================================= */
+   /* FORMULÁRIOS E FAQ */
+
 .busca-cep { 
     display: flex; 
     gap: 10px; 

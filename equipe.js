@@ -1,3 +1,4 @@
+// Cria uma lista de objetos (array) para armazenar os dados de cada pessoa em um só lugar
 const membros = [
             { nome: "Maria Eduarda", cargo: "Design do Site", github: "anes3103", email: "m.anes@uni9.edu.br", img: "imagens/avatar/Eduarda.jpeg"},     
             { nome: "Felipe", cargo: "Testes e Integração", github: "felipe-dev", email: "yfelipeferreirasilvay@uni9.edu.br", img: "imagens/avatar/Felipe.jpeg" },
@@ -12,15 +13,17 @@ const membros = [
             { nome: "Marco", cargo: "Orçamentos e Hardware", github: "marco-arch", email: "ferreira.marco@uni9.edu.br", img: "imagens/avatar/Marco.jpeg" },    
     ];
 
-const container = document.getElementById('team-container');
-let html = '';
+const container = document.getElementById('team-container'); // Seleciona o elemento onde os membros serão colocados
+let html = ''; // Variável para acumular todo o código HTML que será gerado no loop
 
-membros.forEach(m => {  
+membros.forEach(m => {   // forEach percorre cada item da lista 'membros', um por um, chamando-o de 'm'
+    //as crases `` permitem usar variáveis como ${m.nome} direto no texto, ou seja, facilita o html de ser escrito no js 
     html += `
         <div class="member-small glass-card">
             <img src="${m.img}" alt="${m.nome}">
             <h4>${m.nome}</h4>
             <span class="role-tag">${m.cargo}</span>
+        
             <div class="member-links">
                 <a href="https://github.com/${m.github}" target="_blank" title="GitHub">
                     <i class="fab fa-github"></i>
@@ -31,6 +34,10 @@ membros.forEach(m => {
             </div>
         </div>
     `;
+
+    // O código acima cria um bloco HTML para cada membro, usando as informações do objeto 'm' (nome, cargo, github, email e imagem).
+    // o member-small define o estilo do cartão dos membros, sendo glass-card um código que dá efeito de vidro
+    //member-links define o estilos dos links e seus icones são so font-awesome localizados no index.html
 });
 
 container.innerHTML = html;
